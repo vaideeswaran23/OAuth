@@ -16,7 +16,7 @@
 			<div class="hero-body">
 				<div class="container">
 					<article class="center custom-title">
-						Phantom Code
+						Zoho OAuth API
 					</article>
 				</div>
 			</div>
@@ -24,22 +24,21 @@
         <section class="hero">
             <div class="hero-body">
                 <div class="container">
-                    <h3 class="title is-2 center">Zoho OAuth API</h3>
-                    <form class="form">                  
                     <div class="field padding-bottom">
-                    <label class="label">Action</label>
-                        <div class="control">
-                            <div class="select is-fullwidth">
-                            <select id="select" name="action" class="select" required>
-                                <option value="" disabled selected>Select any Action..</option>
-                                <option value="1">Generate Refresh and Access Token</option>
-                                <option value="2">Generate Access Token From Refresh Token</option>
-                                <option value="3">Revoke Refresh Token</option>
-                            </select>
+                        <label class="label">Action</label>
+                            <div class="control">
+                                <div class="select is-fullwidth">
+                                <select id="select" name="action" class="select" required>
+                                    <option value="" disabled selected>Select any Action..</option>
+                                    <option value="1">Generate Refresh and Access Token</option>
+                                    <option value="2">Generate Access Token From Refresh Token</option>
+                                    <option value="3">Revoke Refresh Token</option>
+                                </select>
+                                </div>
                             </div>
+                            <p class="help is-danger" id="selectError"></p>
                         </div>
-                        <p class="help is-danger" id="selectError"></p>
-                    </div>
+                    <form class="form">
                         <div class="field padding-bottom hide" id="clientIdContainer">
                             <label class="label">Client Id</label>
                             <div class="control">

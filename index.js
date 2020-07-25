@@ -30,7 +30,9 @@ const onSelect = event => {
         clientId.required = true
         clientSecret.required = true
         refreshToken.required = false
-
+        clientId.disabled = false
+        clientSecret.disabled = false
+        refreshToken.disabled = true
     }
     if(actionValue ===  '2') {
         container1.classList.remove('hide')
@@ -39,6 +41,9 @@ const onSelect = event => {
         clientId.required = true
         clientSecret.required = true
         refreshToken.required = true
+        clientId.disabled = false
+        clientSecret.disabled = false
+        refreshToken.disabled = false
     }
     if(actionValue ===  '3') {
         container1.classList.add('hide')
@@ -47,6 +52,9 @@ const onSelect = event => {
         clientId.required = false
         clientSecret.required = false
         refreshToken.required = true
+        clientId.disabled = true
+        clientSecret.disabled = true
+        refreshToken.disabled = false
     }
 }
 
