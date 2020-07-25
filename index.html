@@ -12,15 +12,25 @@
         <!-- <link rel="stylesheet" href="styles/debug.css"> -->
 	</head>
 	<body>
-        <section class="hero is-fullheight">
+        <section class="hero has-background-black">
+			<div class="hero-body">
+				<div class="container">
+					<article class="center custom-title">
+						Phantom Code
+					</article>
+				</div>
+			</div>
+		</section>
+        <section class="hero">
             <div class="hero-body">
-                <div class="container">    
+                <div class="container">
+                    <h3 class="title is-2 center">Zoho OAuth API</h3>
                     <form class="form">                  
                     <div class="field padding-bottom">
                     <label class="label">Action</label>
                         <div class="control">
                             <div class="select is-fullwidth">
-                            <select id="select" name="action">
+                            <select id="select" name="action" class="select" required>
                                 <option value="" disabled selected>Select any Action..</option>
                                 <option value="1">Generate Refresh and Access Token</option>
                                 <option value="2">Generate Access Token From Refresh Token</option>
@@ -28,32 +38,30 @@
                             </select>
                             </div>
                         </div>
+                        <p class="help is-danger" id="selectError"></p>
                     </div>
                         <div class="field padding-bottom hide" id="clientIdContainer">
                             <label class="label">Client Id</label>
                             <div class="control">
-                              <input id='clientId' name="clientId" class="input" type="text" placeholder="Enter Client Id">
+                              <input id='clientId' name="clientId" class="input" type="text" placeholder="Enter Client Id" required minlength="1" maxlength="100">
                             </div>
+                            <p class="help is-danger" id="clientIdError"></p>
                         </div>
                         <div class="field padding-bottom hide" id="clientSecretContainer">
                             <label class="label">Client Secret</label>
                             <div class="control">
-                              <input id='clientSecret' name="clientSecret" class="input" type="text" placeholder="Enter Client Secret">
+                              <input id='clientSecret' name="clientSecret" class="input" type="text" placeholder="Enter Client Secret" required minlength="1" maxlength="100">
                             </div>
-                        </div>
-                        <div class="field padding-bottom hide" id="redirectURLContainer">
-                            <label class="label">Redirect URL</label>
-                            <div class="control">
-                              <input id='redirectURL' name="redirectURL" class="input" type="text" placeholder="Enter Redirect URL">
-                            </div>
+                            <p class="help is-danger" id="clientSecretError"></p>
                         </div>
                         <div class="field padding-bottom hide" id="refreshTokenContainer">
                             <label class="label">Refresh Token</label>
                             <div class="control">
-                              <input id='refreshToken' name="refreshToken" class="input" type="text" placeholder="Enter Refresh Token">
+                              <input id='refreshToken' name="refreshToken" class="input" type="text" placeholder="Enter Refresh Token" required minlength="1" maxlength="100">
                             </div>
+                            <p class="help is-danger" id="refreshTokenError"></p>
                         </div>
-                    <div class="field is-grouped is-pulled-right">
+                    <div class="field is-grouped is-grouped-right">
                         <div class="control">
                           <button type="submit" class="button is-link has-background-success">Submit</button>
                         </div>
