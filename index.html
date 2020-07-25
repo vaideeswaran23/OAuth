@@ -42,24 +42,31 @@
                         <div class="field padding-bottom hide" id="clientIdContainer">
                             <label class="label">Client Id</label>
                             <div class="control">
-                              <input id='clientId' name="clientId" class="input" type="text" placeholder="Enter Client Id" required minlength="1" maxlength="100">
+                              <input id='clientId' name="clientId" class="input" type="text" placeholder="Enter Client Id" required maxlength="100">
                             </div>
                             <p class="help is-danger" id="clientIdError"></p>
                         </div>
                         <div class="field padding-bottom hide" id="clientSecretContainer">
                             <label class="label">Client Secret</label>
                             <div class="control">
-                              <input id='clientSecret' name="clientSecret" class="input" type="text" placeholder="Enter Client Secret" required minlength="1" maxlength="100">
+                              <input id='clientSecret' name="clientSecret" class="input" type="text" placeholder="Enter Client Secret" required maxlength="100">
                             </div>
                             <p class="help is-danger" id="clientSecretError"></p>
                         </div>
                         <div class="field padding-bottom hide" id="refreshTokenContainer">
                             <label class="label">Refresh Token</label>
                             <div class="control">
-                              <input id='refreshToken' name="refreshToken" class="input" type="text" placeholder="Enter Refresh Token" required minlength="1" maxlength="100">
+                              <input id='refreshToken' name="refreshToken" class="input" type="text" placeholder="Enter Refresh Token" required maxlength="100">
                             </div>
                             <p class="help is-danger" id="refreshTokenError"></p>
                         </div>
+                        <div class="field padding-bottom hide" id="oAuthScopeContainer">
+                            <label class="label">OAuth Scope</label>
+                            <div class="control">
+                              <textarea id="oAuthScope" class="textarea" name=oAuthScope required maxlength="500"></textarea>
+                            </div>
+                            <p class="help is-danger" id="oAuthScopeError"></p>
+                        </div>                          
                     <div class="field is-grouped is-grouped-right">
                         <div class="control">
                           <button type="submit" class="button is-link has-background-success">Submit</button>
