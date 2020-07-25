@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>OAuth API</title>
+		<link rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.0/css/bulma.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+        <link href="./index.css" rel="stylesheet">
+        <!-- <link rel="stylesheet" href="styles/debug.css"> -->
+	</head>
+	<body>
+        <section class="hero is-fullheight">
+            <div class="hero-body">
+                <div class="container">    
+                    <form class="form">                  
+                    <div class="field padding-bottom">
+                    <label class="label">Action</label>
+                        <div class="control">
+                            <div class="select is-fullwidth">
+                            <select id="select" name="action">
+                                <option value="" disabled selected>Select any Action..</option>
+                                <option value="1">Generate Refresh and Access Token</option>
+                                <option value="2">Generate Access Token From Refresh Token</option>
+                                <option value="3">Revoke Refresh Token</option>
+                            </select>
+                            </div>
+                        </div>
+                    </div>
+                        <div class="field padding-bottom hide" id="clientIdContainer">
+                            <label class="label">Client Id</label>
+                            <div class="control">
+                              <input id='clientId' name="clientId" class="input" type="text" placeholder="Enter Client Id">
+                            </div>
+                        </div>
+                        <div class="field padding-bottom hide" id="clientSecretContainer">
+                            <label class="label">Client Secret</label>
+                            <div class="control">
+                              <input id='clientSecret' name="clientSecret" class="input" type="text" placeholder="Enter Client Secret">
+                            </div>
+                        </div>
+                        <div class="field padding-bottom hide" id="redirectURLContainer">
+                            <label class="label">Redirect URL</label>
+                            <div class="control">
+                              <input id='redirectURL' name="redirectURL" class="input" type="text" placeholder="Enter Redirect URL">
+                            </div>
+                        </div>
+                        <div class="field padding-bottom hide" id="refreshTokenContainer">
+                            <label class="label">Refresh Token</label>
+                            <div class="control">
+                              <input id='refreshToken' name="refreshToken" class="input" type="text" placeholder="Enter Refresh Token">
+                            </div>
+                        </div>
+                    <div class="field is-grouped is-pulled-right">
+                        <div class="control">
+                          <button type="submit" class="button is-link has-background-success">Submit</button>
+                        </div>
+                        <div class="control">
+                          <button class="button is-link is-light has-background-danger">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <script src="./index.js"></script>
+	</body>
+</html>

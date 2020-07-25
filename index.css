@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    background-color: white;
+    color: black;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.padding-bottom {
+    padding-bottom: 20px;
+}
+
+.label::after {
+    content: " *";
+    color: red;
+}
+
+.hide {
+    display: none;
+}
